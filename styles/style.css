@@ -1,0 +1,188 @@
+@font-face {
+	font-family: "AO Mono";
+	src: url('../font/AOMono-Regular.otf');
+}
+@font-face {
+	font-family: "AO Mono";
+    font-style: bold;
+	src: url('../font/AOMono-Bold.otf');
+}
+@font-face {
+	font-family: "AO Mono";
+	font-weight: italic;
+	src: url('../font/AOMono-Black.otf');
+}
+
+
+p{
+    font-family: "AO Mono",Arial, Helvetica, sans-serif;
+    line-height: 17px;
+}
+
+
+#main_image_div{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    transform-origin:center;
+    z-index: 499;
+}
+
+@keyframes wowAnimation {
+    0% { 
+        transform-origin: center;
+    }
+    50% {
+        transform-origin: center;
+        -webkit-transform: rotate(360deg) scale(20) ;
+        transform: rotate(360deg) scale(20);
+    }
+    100%{
+        transform-origin: center;
+        -webkit-transform: rotate(-360deg) scale(1) ;
+        transform: rotate(-360deg) scale(1);
+    }
+}
+
+.wowAnimationClass{
+    animation: wowAnimation 5s;
+}
+
+#text_btc{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    z-index: 500;
+}
+
+#ameliorationContainerL{
+    background-color: rgba(255, 255, 255, 0); 
+    position: absolute;
+    float: left;
+    height: 99%;
+    width: 35%;
+    right: 1%;
+    border-radius: 10px;
+}
+
+#transcender{
+    background-color: rgba(255, 255, 255, 0); 
+    text-align: center;
+}
+#transcender img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#transcender img:hover{
+    filter: saturate(150%);
+}
+
+#ameliorationContainerR{
+    background-color: rgba(255,255,255,0); 
+    position: absolute;
+    float: right;
+    height: 99%;
+    width: 35%;
+    left: 1%;
+    border-radius: 10px;
+}
+
+.amelioration{
+    background-color: rgba(255,255,255,0); 
+    position: relative;
+    font-size: 1.5vw;
+    height: 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+.amelioration img{
+    object-fit: cover;
+    width: 150%;
+    height: 150%;
+}
+
+.amelioration p{
+    position: absolute;
+    z-index: 2;
+    top:70%;
+    left: 50%;
+    line-height: 2vw;
+    transform: translate(-50%,-50%);
+}
+.buyButton{
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    left: 1%;
+    line-height: 2vw;
+    background-color: rgb(105, 0, 105);
+    height: 20%;
+    width: 20%;
+    outline: none;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    border-radius: 15px;
+}
+
+.buyButton:hover{
+    background-color: rgb(143, 0, 143);
+}
+
+.buyButton:active{
+    background-color: rgb(255, 0, 255);
+    transition-duration: 0.2s;
+}
+
+
+
+.sellButton{
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    right: 1%;
+    line-height: 2vw;
+    background-color: rgb(95, 95, 95);
+    height: 20%;
+    width: 20%;
+    outline: none;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.sellButton:hover{
+    background-color: rgb(139, 139, 139);
+}
+
+.sellButton:active{
+    background-color: rgb(54, 54, 54);
+    transition-duration: 0.2s;
+}
+
+
+.amelioration img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    z-index: 1;
+    object-fit: cover;
+    
+}
+
+#amelioration1 img, #amelioration2 img{
+    transform: translate(0,-20%);
+}
+
+#amelioration2, #amelioration3, #amelioration4{
+    color: white;
+}
